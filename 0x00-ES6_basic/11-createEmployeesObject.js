@@ -1,6 +1,6 @@
 export default function createEmployeesObject(departmentName, employees) {
   const lilac = {
-    departmentName: [...employees],
+    [departmentName]: [...employees],
   };
 
   return lilac;
