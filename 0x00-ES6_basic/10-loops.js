@@ -1,6 +1,7 @@
 export default function appendToEachArrayValue(array, appendString) {
-  let lilac = [];
-  for (let value of array) {
+  const lilac = [];
+
+  for (const value of array) {
     lilac.push(appendString + value);
   }
 
