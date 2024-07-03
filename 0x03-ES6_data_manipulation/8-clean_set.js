@@ -1,10 +1,10 @@
 export default function cleanSet(set, startString) {
-  const lilac = [];
-  for (const word of set) {
-    if (word.startsWith(startString) && startString.length > 0) {
-      lilac.push(word.slice(startString.length));
-    }
+  if (!startString || startString.length === 0) {
+    return '';
   }
 
-  return (lilac.join('-'));
+  return [...set]
+    .filter((string) => (string !== undefined ? string.startsWith(startString) : ''))
+    .map((string) => (string !== undefined ? string.slice(startString.length) : ''))
+    .join('-');
 }
